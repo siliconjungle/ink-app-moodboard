@@ -1,0 +1,2 @@
+Moodboard verification file.
+Keep this original file unchanged when removing its card from a board.

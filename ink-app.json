@@ -1,0 +1,90 @@
+{
+  "slug": "moodboard",
+  "title": "Moodboard",
+  "repository": "https://github.com/siliconjungle/ink-app-moodboard",
+  "directory": "public",
+  "entry": "index.html",
+  "desktop": {
+    "entry": "moodboard",
+    "context": "self",
+    "icon": "./icon.svg",
+    "dropTypes": [
+      "image/*",
+      ".png",
+      ".jpg",
+      ".jpeg",
+      ".gif",
+      ".webp",
+      ".svg",
+      ".avif",
+      ".heic",
+      ".heif",
+      ".bmp",
+      ".tif",
+      ".tiff"
+    ],
+    "dock": false,
+    "window": {
+      "width": 1060,
+      "height": 720
+    }
+  },
+  "capabilities": [
+    "world.read",
+    "world.write",
+    "desktop.open"
+  ],
+  "commands": [
+    {
+      "id": "new-board",
+      "title": "New moodboard…",
+      "description": "Start a new shared moodboard.",
+      "inputs": [],
+      "handler": {
+        "type": "open"
+      }
+    },
+    {
+      "id": "files",
+      "title": "Show moodboard files",
+      "description": "Browse or search show moodboard files.",
+      "inputs": [
+        {
+          "name": "q",
+          "label": "Search",
+          "type": "text",
+          "required": false
+        },
+        {
+          "name": "offset",
+          "label": "Offset",
+          "type": "number",
+          "required": false,
+          "default": 0
+        },
+        {
+          "name": "limit",
+          "label": "Results per page",
+          "type": "number",
+          "required": false,
+          "default": 30
+        }
+      ],
+      "handler": {
+        "type": "query",
+        "query": {
+          "kind": "file",
+          "fileTypes": [
+            "*"
+          ]
+        }
+      },
+      "result": {
+        "items": "objects",
+        "title": "title",
+        "subtitle": "kind"
+      }
+    }
+  ],
+  "commandsClient": "commands.mjs"
+}

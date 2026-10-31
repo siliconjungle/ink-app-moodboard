@@ -1,0 +1,14 @@
+{
+  "commit": "2149e2b36680fb653214e8af195a32e634b272cf",
+  "files": [
+    "src/browser.js",
+    "src/gestures.js",
+    "src/desktop-keys.js",
+    "src/live-query.js",
+    "styles/tokens.css",
+    "styles/font.css",
+    "styles/fonts/inter-latin-wght-normal.woff2",
+    "styles/fonts/OFL.txt"
+  ],
+  "distribution": "Bundled Ink OS SDK assets"
+}
